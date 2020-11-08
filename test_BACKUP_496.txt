@@ -1,0 +1,6 @@
+line two
+<<<<<<< HEAD
+conflict1
+=======
+conflict2
+>>>>>>> conflict2

@@ -1,0 +1,2 @@
+line two
+conflict2
