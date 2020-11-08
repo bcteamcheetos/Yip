@@ -1,2 +1,2 @@
 line two
-conflict1
+This is another line for a test
