@@ -16,27 +16,31 @@ namespace CarGalleryApp.Models
         public string Id { get; set; }
 
         [BsonElement("Brand")]
+        [Display(Name = "Restaurant")]
         [Required]
         public string Brand { get; set; }
 
         [BsonElement("Model")]
+        [Display(Name = "Date")]
         [Required]
-        public string Model { get; set; }
-
+       
+        public DateTime Model { get; set; }//formatted for date
+        [Display(Name = "Rating(1-5)")]
         [BsonElement("Year")]
         [Required]
-        [YearRange]
+        //[YearRange]
         public int Year { get; set; }
 
         [BsonElement("Price")]
-        [Display(Name = "Price($)")]
-        [DisplayFormat(DataFormatString = "{0:#,0}")]
-        public decimal Price { get; set; }
+        [Display(Name = "Comment")]
+        [Required]
+        
+        public string Price { get; set; } //changed to string
 
         [BsonElement("ImageUrl")]
         [Display(Name = "Photo")]
-        [DataType(DataType.ImageUrl)]
-        [Required]
+        [DataType(DataType.ImageUrl)]//Deleted Required
+        
         public string ImageUrl { get; set; }
     }
 }
