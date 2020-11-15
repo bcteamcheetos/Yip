@@ -25,6 +25,7 @@ namespace CarGalleryApp.Models
         [Required]
        
         public DateTime Model { get; set; }//formatted for date
+        [Range(1, 5)]
         [Display(Name = "Rating(1-5)")]
         [BsonElement("Year")]
         [Required]
