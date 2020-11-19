@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CarGalleryApp.Models;
+using YipRestaurantApp.Models;
 
-namespace CarGalleryApp.Controllers
+namespace YipRestaurantApp.Controllers
 {
     public class HomeController : Controller
     {

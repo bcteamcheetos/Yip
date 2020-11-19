@@ -2,43 +2,43 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using CarGalleryApp.Models;
+using YipRestaurantApp.Models;
 
-namespace CarGalleryApp.Services
+namespace YipRestaurantApp.Services
 {
     public class CarService
     {
-        private readonly IMongoCollection<Car> cars;
+        private readonly IMongoCollection<Review> cars;
 
         public CarService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("CarGalleryDb"));
             IMongoDatabase database = client.GetDatabase("CarGalleryDb");
-            cars = database.GetCollection<Car>("Cars");
+            cars = database.GetCollection<Review>("Cars");
         }
 
-        public List<Car> Get()
+        public List<Review> Get()
         {
             return cars.Find(car => true).ToList();
         }
 
-        public Car Get(string id)
+        public Review Get(string id)
         {
             return cars.Find(car => car.Id == id).FirstOrDefault();
         }
 
-        public Car Create(Car car)
+        public Review Create(Review car)
         {
             cars.InsertOne(car);
             return car;
         }
 
-        public void Update(string id, Car carIn)
+        public void Update(string id, Review carIn)
         {
             cars.ReplaceOne(car => car.Id == id, carIn);
         }
 
-        public void Remove(Car carIn)
+        public void Remove(Review carIn)
         {
             cars.DeleteOne(car => car.Id == carIn.Id);
         }

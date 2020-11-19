@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\Yip\\CarGalleryApp\\CarGalleryApp.csproj": {}
+    "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\YipRestaurantApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\Yip\\CarGalleryApp\\CarGalleryApp.csproj": {
+    "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\YipRestaurantApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\Yip\\CarGalleryApp\\CarGalleryApp.csproj",
-        "projectName": "CarGalleryApp",
-        "projectPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\Yip\\CarGalleryApp\\CarGalleryApp.csproj",
+        "projectUniqueName": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\YipRestaurantApp.csproj",
+        "projectName": "YipRestaurantApp",
+        "projectPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\YipRestaurantApp.csproj",
         "packagesPath": "C:\\Users\\Kyu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\Yip\\CarGalleryApp\\obj\\",
+        "outputPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kyu\\AppData\\Roaming\\NuGet\\NuGet.Config",

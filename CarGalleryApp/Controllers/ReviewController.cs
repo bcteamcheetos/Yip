@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CarGalleryApp.Models;
-using CarGalleryApp.Services;
+using YipRestaurantApp.Models;
+using YipRestaurantApp.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CarGalleryApp.Controllers
+namespace YipRestaurantApp.Controllers
 {
-    public class CarsController : Controller
+    public class ReviewController : Controller
     {
         private readonly CarService carService;
-        public CarsController(CarService carService)
+        public ReviewController(CarService carService)
         {
             this.carService = carService;
         }
-        // GET: CarsController
+        // GET: ReviewController
         public ActionResult Index()
         {
             return View(carService.Get());
         }
 
-        // GET: CarsController/Details/5
+        // GET: ReviewController/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -37,16 +37,16 @@ namespace CarGalleryApp.Controllers
             return View(car);
         }
 
-        // GET: CarsController/Create
+        // GET: ReviewController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CarsController/Create
+        // POST: ReviewController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Car car)
+        public ActionResult Create(Review car)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace CarGalleryApp.Controllers
             //}
         }
 
-        // GET: CarsController/Edit/5
+        // GET: ReviewController/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -79,10 +79,10 @@ namespace CarGalleryApp.Controllers
             return View(car);
         }
 
-        // POST: CarsController/Edit/5
+        // POST: ReviewController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(string id, Car car)
+        public ActionResult Edit(string id, Review car)
         {
             if(id != car.Id)
             {
@@ -99,7 +99,7 @@ namespace CarGalleryApp.Controllers
             }
         }
 
-        // GET: CarsController/Delete/5
+        // GET: ReviewController/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -115,7 +115,7 @@ namespace CarGalleryApp.Controllers
             return View(car);
         }
 
-        // POST: CarsController/Delete/5
+        // POST: ReviewController/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
