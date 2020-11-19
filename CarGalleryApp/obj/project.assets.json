@@ -6225,23 +6225,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Neil\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kyu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Neil\\Desktop\\TestFolder\\CarAppMongo\\Yip\\CarGalleryApp\\CarGalleryApp.csproj",
-      "projectName": "CarGalleryApp",
-      "projectPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\CarAppMongo\\Yip\\CarGalleryApp\\CarGalleryApp.csproj",
-      "packagesPath": "C:\\Users\\Neil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\CarAppMongo\\Yip\\CarGalleryApp\\obj\\",
+      "projectUniqueName": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "projectName": "YipRestaurantApp",
+      "projectPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "packagesPath": "C:\\Users\\Kyu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\ProjCode2Changes\\CarGalleryApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Neil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

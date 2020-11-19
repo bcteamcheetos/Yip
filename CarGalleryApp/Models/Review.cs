@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
-using CarGalleryApp.CustomAttributes;
+using YipRestaurantApp.CustomAttributes;
 
-namespace CarGalleryApp.Models
+namespace YipRestaurantApp.Models
 {
-    public class Car
+    public class Review
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

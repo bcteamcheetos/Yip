@@ -1,6 +1,6 @@
 using System;
 
-namespace CarGalleryApp.Models
+namespace YipRestaurantApp.Models
 {
     public class ErrorViewModel
     {
