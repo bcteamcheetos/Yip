@@ -1,48 +1,237 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Yip Review App</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Cars" asp-action="Index">View Yip Review</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+@*the head/all metatags, cs, js*@
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" /> @*shrink-to-fit=no  -> dont scale things when resizing from breakpoints/viewport*@
+
+    <title>@ViewData["Title"] Yip Review App</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> @*fontawesome fonts library*@
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" /> 
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"> @*overwrites lib bootstrap*@
+    <link href="css/mdb.min.css" rel="stylesheet"> @*bootstrap theme css*@
+    <link href="css/style.min.css" rel="stylesheet">  @*bootstrap theme css part 2? condense this with the main bootstrap theme*@
+
+    @* for razerpages, use double:@@media, as it cancels the first @ symbol *@
+    <style type="text/css">
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @@media (max-width: 740px) {
+            html,
+            body,
+            header,
+            .view {
+                height: 1000px;
+            }
+        }
+
+        @@media (min-width: 800px) and (max-width: 850px) {
+            html,
+            body,
+            header,
+            .view {
+                height: 650px;
+            }
+        }
+
+        @@media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+    </style> @*probably should also condense this into the main bootstrap css file*@
+
+</head>
+
+
+@*where the HEADER, BODY, FOOTER, and js for each page will load*@
+<body>
+
+
+    @*the header and navbar*@
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
         <div class="container">
-            &copy; 2020 - Yip Review App <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+            @*Yip! button and home button*@
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <strong>Yip!</strong>
+            </a>
+
+            @*still not quite sure what this does yet - maybe hamburger button?*@
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            @*links across header!*@
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                @*main links*@
+                <ul class="navbar-nav mr-auto">
+
+                    @*home button*@
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    @*MAKE NEW REVIEW*@
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Cars" asp-action="Index">View Yip Reviews</a>
+                    </li>
+
+                    @*goes to privacy page*@
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+
+                </ul>
+
+                @*social media links, for funsies*@
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/BellevueCollegeiBIT/" class="nav-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/bellevuecollege" class="nav-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/bcteamcheetos" class="nav-link border border-light rounded"
+                           target="_blank">
+                            <i class="fab fa-github mr-2"></i>#TeamCheetos
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
         </div>
+    </nav>
+
+
+
+
+    @*main body - put the @RenderBody tag in here in place of all the buttons*@
+    <div class="view full-page-intro" style="background-image: url(); background-repeat: no-repeat; background-size: cover;">
+        <img src="~/img/santa-monica-pier_small.gif" style="object-fit:cover; display: block;  width: 100vw; height: 100vh;" />
+
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="container">
+
+                @*main body of site, is a single row that runs with "wow"*@
+                <div class="row wow fadeIn">
+
+                    @RenderBody()
+
+                </div>
+                <!--Grid row-->
+
+            </div>
+            <!-- Content -->
+
+        </div>
+
+
+    </div>
+    @*...end of main body*@
+
+
+
+
+    @*bootstrap theme footer*@
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+        @* "Call to action"... use these buttons/links for... something? *@
+        <div class="pt-4">
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">
+                Download MDB
+                <i class="fas fa-download ml-2"></i>
+            </a>
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">
+                Start free tutorial
+                <i class="fas fa-graduation-cap ml-2"></i>
+            </a>
+        </div>
+
+
+        <hr class="my-4">
+
+        @*social network icons for Bellevue College*@
+        <div class="pb-4">
+
+            <a href="https://www.facebook.com/BellevueCollegeiBIT/" target="_blank">
+                <i class="fab fa-facebook-f mr-3"></i>
+            </a>
+
+            <a href="https://twitter.com/bellevuecollege" target="_blank">
+                <i class="fab fa-twitter mr-3"></i>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCX86Bgg4jyBctRWtvCKtD-A" target="_blank">
+                <i class="fab fa-youtube mr-3"></i>
+            </a>
+
+
+        </div>
+
+
+
+        <div class="footer-copyright py-3">
+            <div>
+                &copy; 2020 - Yip Review App <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <br />
+
+
+                @* this copyright liscense is required to use this bootstrap theme *@
+                Bootstrap Theme:
+                <br>
+                © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+            </div>
+
+
+
+        </div>
+
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @*bootstrap theme's js files*@
+    <script src="~/js/jquery-3.4.1.min.js" asp-append-version="true"></script>
+    <script src="~/js/popper.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.min.js" asp-append-version="true"></script> @*this file builds the "wow" which has all the fading and animations*@
+    <script src="~/js/mdb.min.js" asp-append-version="true"></script>
+
+    @*manual/normal/flat javascript file*@
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @*what the heck is this stuff?? makes the page not superfail via microsoft mvc*@
     @RenderSection("Scripts", required: false)
+
+    @*instantiates the animation objects for the page*@
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+
 </body>
+
 </html>

@@ -2,7 +2,88 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to the Yip Application</h1>
-    <p>This is an application for exclusive group's of people to add authentic reviews of restaurants</p>
+
+<div class="col-md-6 mb-4 white-text text-center text-md-left">
+
+    <h1 class="display-4 font-weight-bold">Welcome to the Yip Application</h1>
+
+    <hr class="hr-light">
+
+    <p>
+        <strong>[insert cheeky yip tagline here]</strong>
+    </p>
+
+    <p class="mb-4 d-none d-md-block">
+        <strong>
+            This is an application for exclusive groups of people to add authentic reviews of restaurants.
+        </strong>
+    </p>
+
+    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-indigo btn-lg">
+        @* this needs an asp.net link to submit HERE for signup API call etc etc HERE *@
+        Sign Up!
+        <i class="fas fa-user-plus ml-2"></i>
+    </a>
+
 </div>
+
+
+
+<div class="col-md-6 col-xl-5 mb-4">
+
+    <!--Card-->
+    <div class="card">
+
+        <!--Card content-->
+        <div class="card-body">
+
+            <!-- Form -->
+            <form name="">
+                <!-- Heading -->
+                <h3 class="dark-grey-text text-center">
+                    <strong>Login Here</strong>
+                </h3>
+                <hr>
+
+                <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="form3" class="form-control">
+                    <label for="form3">Email Address</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="text" id="form2" class="form-control">
+                    <label for="form2">Password</label>
+                </div>
+
+                @*use this space/template for text inputs for the reviews*@
+                @*<div class="md-form">
+                        <i class="fas fa-pencil-alt prefix grey-text"></i>
+                        <textarea type="text" id="form8" class="md-textarea"></textarea>
+                        <label for="form8">Your message</label>
+                    </div>*@
+
+                <div class="text-center">
+                    <button class="btn btn-indigo">
+                        Login
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                    </button>
+                    <hr>
+                    <fieldset class="form-check">
+                        <input type="checkbox" class="form-check-input" id="checkbox1">
+                        <label for="checkbox1" class="form-check-label dark-grey-text">Subscribe for Email Notifications!</label>
+                    </fieldset>
+                </div>
+
+            </form>
+            <!-- Form -->
+
+        </div>
+
+    </div>
+    <!--/.Card-->
+
+</div>
+
+

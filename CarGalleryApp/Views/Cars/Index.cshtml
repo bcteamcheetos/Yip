@@ -4,67 +4,78 @@
     ViewData["Title"] = "Car Gallery";
 }
 
-<h1>List of Reviews</h1>
+<h1 class="text-light">List of Reviews   </h1>
 
-<p>
-    <a asp-action="Create">Add a New Review </a>
-</p>
+@*create new review button*@
+<a asp-action="Create" class="btn btn-outline-white">
+      Add a New Review
+    <i class="fas fa-download ml-2"></i>
+</a>
+
+
 
 <table class="table">
+
     <thead>
         <tr>
-            <th>
+
+            <th class="text-light">
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
-
-            <th>
+            <th class="text-light">
                 @Html.DisplayNameFor(model => model.Brand)
             </th>
-            <th>
+            <th class="text-light">
                 @Html.DisplayNameFor(model => model.Model)
             </th>
-            <th>
+            <th class="text-light">
                 @Html.DisplayNameFor(model => model.Year)
             </th>
-            <th>
+            <th class="text-light">
                 @Html.DisplayNameFor(model => model.Price)
             </th>
 
             <th></th>
         </tr>
     </thead>
+
     <tbody>
+
         @foreach (var item in Model)
         {
             <tr>
+
                 <td>
                     @if (item.ImageUrl != null)
                     {
                         <img src="@Url.Content(item.ImageUrl)" alt="Image" />
                     }
                 </td>
-
-                <td>
+                <td class="text-light">
                     @Html.DisplayFor(modelItem => item.Brand)
                 </td>
-                <td>
+                <td class="text-light">
                     @Html.DisplayFor(modelItem => item.Model)
                 </td>
-                <td>
+                <td class="text-light">
                     @Html.DisplayFor(modelItem => item.Year)
                 </td>
-                <td>
+                <td class="text-light">
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
-                <td>
+                <td class="text-light">
                     @Html.DisplayFor(modelItem => item.ImageUrl)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                <td class="text-light">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "text-light", @alt="Edit button"}) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "text-light", @alt = "Details button"}) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "text-light", @alt = "Delete button"})
                 </td>
             </tr>
         }
     </tbody>
+
 </table>
+
+
+
