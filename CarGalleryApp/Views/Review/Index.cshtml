@@ -13,21 +13,21 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
+            @*<th>*@
+                @*@Html.DisplayNameFor(model => model.ImageUrl)*@ @*img*@
+            @*</th>*@
 
             <th>
-                @Html.DisplayNameFor(model => model.Brand)
+                @Html.DisplayNameFor(model => model.Brand) @*restaurant name*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Model)
+                @Html.DisplayNameFor(model => model.Model) @*date*@
+            </th>
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.Year) @*rating*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Year)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Price) @*comments*@
             </th>
 
             <th></th>
@@ -37,12 +37,12 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
+                @*<td>
                     @if (item.ImageUrl != null)
                     {
                         <img src="@Url.Content(item.ImageUrl)" alt="Image" />
                     }
-                </td>
+                </td>*@
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Brand)
@@ -59,8 +59,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.ImageUrl)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                <td style="width:200px">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |     @*buttons*@
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
