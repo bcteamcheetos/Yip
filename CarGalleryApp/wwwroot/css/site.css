@@ -69,3 +69,23 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+
+/* layout css edits
+----------------------------------------------------*/
+.red {
+    color: red !important;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.grad1 {
+    background-color: white;
+    background-image: linear-gradient(to right, #EFF3F8, white, white, white, white, white, white, white, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, white, white); /*#68BFEC*/
+}
+
+.grad2 {
+    background-color: white;
+    background-image: linear-gradient(to right, white, white, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, #EFF3F8, white, white); /*#68BFEC*/
+}
