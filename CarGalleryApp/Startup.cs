@@ -25,6 +25,7 @@ namespace YipRestaurantApp
         {
             services.AddControllersWithViews();
             services.AddScoped<CarService>();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +44,8 @@ namespace YipRestaurantApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
