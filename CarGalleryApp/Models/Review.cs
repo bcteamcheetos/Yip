@@ -38,10 +38,10 @@ namespace YipRestaurantApp.Models
         
         public string Price { get; set; } //changed to string
 
-        [BsonElement("ImageUrl")]
-        [Display(Name = "Photo")]
-        [DataType(DataType.ImageUrl)]//Deleted Required
+        [BsonElement("Person")]
+        [Display(Name = "Person")]
         
-        public string ImageUrl { get; set; }
+
+        public UserModel Person { get; set; }
     }
 }

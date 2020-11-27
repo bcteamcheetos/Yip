@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\!OneDrive\\!scmstr@hotmail.com\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\Yip_BasicCss\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj": {}
+    "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj": {}
   },
   "projects": {
-    "C:\\!OneDrive\\!scmstr@hotmail.com\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\Yip_BasicCss\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj": {
+    "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\!OneDrive\\!scmstr@hotmail.com\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\Yip_BasicCss\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
+        "projectUniqueName": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj",
         "projectName": "YipRestaurantApp",
-        "projectPath": "C:\\!OneDrive\\!scmstr@hotmail.com\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\Yip_BasicCss\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
-        "packagesPath": "C:\\Users\\SCmST\\.nuget\\packages\\",
-        "outputPath": "C:\\!OneDrive\\!scmstr@hotmail.com\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\Yip_BasicCss\\Yip\\CarGalleryApp\\obj\\",
+        "projectPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj",
+        "packagesPath": "C:\\Users\\Neil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\SCmST\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Neil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

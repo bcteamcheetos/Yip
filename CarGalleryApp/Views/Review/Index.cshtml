@@ -14,7 +14,7 @@
     <thead>
         <tr>
             @*<th>*@
-                @*@Html.DisplayNameFor(model => model.ImageUrl)*@ @*img*@
+            @*@Html.DisplayNameFor(model => model.ImageUrl)*@ @*img*@
             @*</th>*@
 
             <th>
@@ -28,6 +28,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Price) @*comments*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Person) @*comments*@
             </th>
 
             <th></th>
@@ -57,7 +60,7 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ImageUrl)
+                    @Html.DisplayFor(modelItem => item.Person) @*Update this to include last Name*@
                 </td>
                 <td style="width:200px">
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |     @*buttons*@

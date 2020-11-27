@@ -48,8 +48,16 @@ namespace YipRestaurantApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Review car)
         {
+            string fName = HttpContext.Session.GetString("personFirst");
+            string lName = HttpContext.Session.GetString("personLast");
+            UserModel aPerson = new UserModel();
+            aPerson.FirstName = fName;
+            aPerson.LastName = lName;
+            car.Person = aPerson;
             if (ModelState.IsValid)
             {
+                
+                
                 carService.Create(car);
                 return RedirectToAction(nameof(Index));
             }
