@@ -60,12 +60,10 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Person) @*Update this to include last Name*@
+                    @Html.DisplayFor(modelItem => item.Person.FirstName) @*Update this to include last Name*@
                 </td>
                 <td style="width:200px">
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |     @*buttons*@
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
                 </td>
             </tr>
         }

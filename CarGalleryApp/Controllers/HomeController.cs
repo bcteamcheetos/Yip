@@ -54,8 +54,16 @@ namespace YipRestaurantApp.Controllers
             ViewBag.firstName = um.FirstName;
             return View("Landing");
         }
-        public IActionResult Privacy()
+        public IActionResult Landing()
         {
+            //This method ensures that the user's first name is pulled when clicking on the "Home" button
+            string fName = HttpContext.Session.GetString("personFirst");
+            string lName = HttpContext.Session.GetString("personLast");
+            
+            if (fName != null)
+            {
+                ViewBag.firstName = fName;
+            }
             return View();
         }
 

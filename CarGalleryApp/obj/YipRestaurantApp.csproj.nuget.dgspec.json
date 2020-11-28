@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj": {}
+    "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\YipRestaurantApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj": {
+    "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\YipRestaurantApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj",
+        "projectUniqueName": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\YipRestaurantApp.csproj",
         "projectName": "YipRestaurantApp",
-        "projectPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\YipRestaurantApp.csproj",
-        "packagesPath": "C:\\Users\\Neil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\CarGalleryApp\\obj\\",
+        "projectPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\YipRestaurantApp.csproj",
+        "packagesPath": "C:\\Users\\Kyu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Neil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
