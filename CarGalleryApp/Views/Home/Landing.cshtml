@@ -4,3 +4,11 @@
 <h1>@ViewData["Title"]</h1>
 
 <h1>Welcome to the Yip App @ViewBag.firstName</h1>
+
+@*To James: These links are all that is really needed to be displayed on this page.
+    Maybe a little more text to embellish where exactly it is taking you. Other than that you're free to format as you wish*@
+
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">View Yip Reviews</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Create">Create a New Yip Review</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Log Out</a>
