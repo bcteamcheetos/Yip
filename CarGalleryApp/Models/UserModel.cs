@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace YipRestaurantApp.Models
 {
-    public class UserModel
+    public class UserModel    ////Log in
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { get; set; }//Setting property for the username
+        public string LastName { get; set; }//setting property for the property
     }
 }
