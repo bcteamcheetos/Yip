@@ -6225,19 +6225,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kyu\\.nuget\\packages\\": {}
+    "C:\\Users\\nicol\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\320Inclasslab\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
       "projectName": "YipRestaurantApp",
-      "projectPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\YipRestaurantApp.csproj",
-      "packagesPath": "C:\\Users\\Kyu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kyu\\Documents\\ISIT320\\CheetosFiles\\Yip-master\\CarGalleryApp\\obj\\",
+      "projectPath": "C:\\Users\\nicol\\320Inclasslab\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nicol\\320Inclasslab\\Yip\\CarGalleryApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Kyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6288,7 +6292,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

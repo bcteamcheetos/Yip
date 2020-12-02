@@ -22,7 +22,8 @@ namespace YipRestaurantApp.Controllers
             return View(carService.Get());
         }
 
-        // GET: ReviewController/Details/5
+        // GET: ReviewController/Details/ connects to the delete view
+
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -43,7 +44,7 @@ namespace YipRestaurantApp.Controllers
             return View();
         }
 
-        // POST: ReviewController/Create
+        // POST: ReviewController/Create connects to the create view
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Review car)
@@ -56,8 +57,8 @@ namespace YipRestaurantApp.Controllers
             car.Person = aPerson;
             if (ModelState.IsValid)
             {
-                
-                
+
+
                 carService.Create(car);
                 return RedirectToAction(nameof(Index));
             }
@@ -72,7 +73,7 @@ namespace YipRestaurantApp.Controllers
             //}
         }
 
-        // GET: ReviewController/Edit/5
+        // GET: ReviewController/Edit/ connects to the edit view
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -87,12 +88,12 @@ namespace YipRestaurantApp.Controllers
             return View(car);
         }
 
-        // POST: ReviewController/Edit/5
+        // POST: ReviewController/Edit/ connects to the edit view
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(string id, Review car)
         {
-            if(id != car.Id)
+            if (id != car.Id)
             {
                 return NotFound();
             }
@@ -107,7 +108,7 @@ namespace YipRestaurantApp.Controllers
             }
         }
 
-        // GET: ReviewController/Delete/5
+        // GET: ReviewController/Delete/  Connects to Delete view
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -123,7 +124,7 @@ namespace YipRestaurantApp.Controllers
             return View(car);
         }
 
-        // POST: ReviewController/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)

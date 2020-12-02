@@ -19,7 +19,7 @@ namespace YipRestaurantApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index()//Views/Home/view
         {
             return View();
         }
@@ -59,7 +59,7 @@ namespace YipRestaurantApp.Controllers
             //This method ensures that the user's first name is pulled when clicking on the "Home" button
             string fName = HttpContext.Session.GetString("personFirst");
             string lName = HttpContext.Session.GetString("personLast");
-            
+
             if (fName != null)
             {
                 ViewBag.firstName = fName;

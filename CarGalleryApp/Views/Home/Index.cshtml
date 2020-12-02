@@ -1,28 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    Layout = "/Views/Shared/_IndexLayout.cshtml";
-}
+﻿@{ ViewData["Title"] = "Home Page";
+    Layout = "/Views/Shared/_IndexLayout.cshtml"; }
 @model YipRestaurantApp.Models.UserModel
 
 <div class="text-center">
     <h1 class="display-4">Welcome to the Yip Application</h1>
     <p>This is an application for exclusive group's of people to add authentic reviews of restaurants</p>
 </div>
+@*creates a form on the login page for the user to loging to the application*@
+<div>
+    <form id="LogIn" asp-action="LogIn" method="post">
+        <div class="form-group col-sm-3">
+            <label>First Name:</label>
+            <input asp-for="FirstName" class="form-control" required size="15" onclick="value=''" /><br />      @*Text box for username*@
+        </div>
+        <div class="form-group col-sm-3">
+            <label>Last Name:</label>
+            <input asp-for="LastName" class="form-control" required size="15" onclick="value=''" /><br />       @*Text box for password*@
+        </div>
+        <div class="inputwrap">
+            <label><button type="submit">Log In</button></label>
+            <label style="color:red;">@ViewBag.LoginMessage</label>
+        </div>
 
-    <div>
-        <form id="LogIn" asp-action="LogIn" method="post">
-            <div class="form-group col-sm-3">
-                <label>First Name:</label>
-                <input asp-for="FirstName" class="form-control" required size="15" onclick="value=''" /><br />
-            </div>
-            <div class="form-group col-sm-3">
-                <label>Last Name:</label>
-                <input asp-for="LastName" class="form-control" required size="15" onclick="value=''" /><br />
-            </div>
-            <div class="inputwrap">
-                <label><button type="submit">Log In</button></label>
-                <label style="color:red;">@ViewBag.LoginMessage</label>
-            </div>
-
-        </form>
-    </div>
+    </form>
+</div>
