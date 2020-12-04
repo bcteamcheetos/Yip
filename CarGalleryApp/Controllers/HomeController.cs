@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using YipRestaurantApp.Models;
+using YipRestaurantApp.Services;
 
 namespace YipRestaurantApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly CarService carService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(CarService carService)
         {
-            _logger = logger;
+            this.carService = carService;
         }
 
         public IActionResult Index()//Views/Home/view
@@ -26,34 +27,23 @@ namespace YipRestaurantApp.Controllers
 
         public IActionResult LogIn(UserModel userModel)
         {
-            //    //Create a DALPerson Object
-            //    //use the DALPerson.CheckLogInCred method to check if the credentials are valid
-            //    //if statement
-            //    //personModel==null --login fail
-            //    //else save the personID, user's first name on the session
-            //    //DALPerson dp = new DALPerson(_configuration);
             UserModel um = new UserModel();
             um.FirstName = userModel.FirstName;
-            um.LastName = userModel.LastName;
+            um.Password = userModel.Password;
+            bool myVar = carService.Get(um.FirstName, um.Password);
+            if (!myVar)
+            {
+                ViewBag.LoginMessage = "Not a valid email or password. Try agin please. ";
+                return View("Index");
+            }
             HttpContext.Session.SetString("personFirst", um.FirstName);
-            HttpContext.Session.SetString("personLast", um.LastName);
-            //    //pm = dp.CheckLogInCredentials(logInCredentialsModel);
-            //    //if (pm == null)
-            //    //{
-            //    //    ViewBag.LoginMessage = "Login Failed!";
-            //    //}
-            //    //else
-            //    //{
-            //    //    HttpContext.Session.SetString("personID", pm.PersonID);
-            //    //    HttpContext.Session.SetString("userName", pm.UserName);
-            //    //    HttpContext.Session.SetString("firstName", pm.FName);
-            //    //    ViewBag.userFirstName = pm.FName;
-            //    //    ViewBag.Display = false;
-            //    //}
+            HttpContext.Session.SetString("personLast", um.Password);
+
             Console.WriteLine($"Login Successful! {um.FirstName}");
             ViewBag.firstName = um.FirstName;
             return View("Landing");
         }
+
         public IActionResult Landing()
         {
             //This method ensures that the user's first name is pulled when clicking on the "Home" button

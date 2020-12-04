@@ -1,14 +1,9 @@
 ﻿@{ ViewData["Title"] = "Landing Page"; }
-<h1>@ViewData["Title"]</h1> @*This view is for our home page*@
 
-<h1>Welcome to the Yip App @ViewBag.firstName</h1>
+<h1>Welcome @ViewBag.firstName</h1>
 
-@*To James: These links are all that is really needed to be displayed on this page.
-    Maybe a little more text to embellish where exactly it is taking you. Other than that you're free to format as you wish*@
+<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a> @*link to "list of reviews" page*@
 
-
-<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">View Yip Reviews</a> @*link to "list of reviews" page*@
-
-<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Create">Create a New Yip Review</a> @*link to 'create review' page*@
+<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Create">Create Review</a> @*link to 'create review' page*@
 
 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Log Out</a> @*link to 'login' page and will log the person out of app*@
