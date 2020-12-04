@@ -40,13 +40,6 @@
         @foreach (var item in Model)
         {
             <tr>
-                @*<td>
-                    @if (item.ImageUrl != null)
-                    {
-                        <img src="@Url.Content(item.ImageUrl)" alt="Image" />
-                    }
-                </td>*@
-
                 <td>
                     @Html.DisplayFor(modelItem => item.Brand)
                 </td>
