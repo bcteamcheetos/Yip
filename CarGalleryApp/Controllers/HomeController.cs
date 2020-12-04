@@ -25,7 +25,7 @@ namespace YipRestaurantApp.Controllers
             return View();
         }
 
-        public IActionResult LogIn(UserModel userModel)
+        public IActionResult LogIn(UserModel userModel) 
         {
             UserModel um = new UserModel();
             um.FirstName = userModel.FirstName;

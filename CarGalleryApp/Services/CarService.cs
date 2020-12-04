@@ -52,23 +52,12 @@ namespace YipRestaurantApp.Services
         public bool Get(string person, string password)
         {
             var myVar = cars.Find(car => car.Person.Password == password).FirstOrDefault();
-            if (myVar != null)
-            {
-                var anotherVar = cars.Find(car => car.Person.FirstName == person).FirstOrDefault();
-                if (anotherVar == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
+            if (myVar != null && myVar.Person.FirstName == person) return true;
             else
             {
                 return false;
             }
-
+      
         }
     }
 }
