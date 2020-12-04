@@ -6225,19 +6225,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aleja\\.nuget\\packages\\": {}
+    "C:\\Users\\Neil\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleja\\OneDrive - Bellevue College\\ISIT 320\\Test\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "projectUniqueName": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
       "projectName": "YipRestaurantApp",
-      "projectPath": "C:\\Users\\aleja\\OneDrive - Bellevue College\\ISIT 320\\Test\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
-      "packagesPath": "C:\\Users\\aleja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleja\\OneDrive - Bellevue College\\ISIT 320\\Test\\Yip\\CarGalleryApp\\obj\\",
+      "projectPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "packagesPath": "C:\\Users\\Neil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\LatestReviewApp\\Yip\\CarGalleryApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\aleja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Neil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
