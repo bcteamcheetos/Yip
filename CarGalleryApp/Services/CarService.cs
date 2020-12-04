@@ -15,7 +15,7 @@ namespace YipRestaurantApp.Services
             MongoClient client = new MongoClient(config.GetConnectionString("CarGalleryDb"));//MongoClient reads instance to preforM DB operations
             IMongoDatabase database = client.GetDatabase("CarGalleryDb");//IMongoDatabase: Represents the Mongo database for performing operations
             cars = database.GetCollection<Review>("Cars");//GetCollection<Review>("Cars"): generic  method used to gain access to data in a specific collection. 
-                                                           //CRUD operations can be preformed against the collection after this method is called
+                                                          //CRUD operations can be preformed against the collection after this method is called
         }
 
         public List<Review> Get()
@@ -47,6 +47,28 @@ namespace YipRestaurantApp.Services
         public void Remove(string id)
         {
             cars.DeleteOne(car => car.Id == id);//Deletes a single document matching the provided search criteria
+        }
+
+        public bool Get(string person, string password)
+        {
+            var myVar = cars.Find(car => car.Person.Password == password).FirstOrDefault();
+            if (myVar != null)
+            {
+                var anotherVar = cars.Find(car => car.Person.FirstName == person).FirstOrDefault();
+                if (anotherVar == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

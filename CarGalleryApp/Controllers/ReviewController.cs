@@ -16,6 +16,7 @@ namespace YipRestaurantApp.Controllers
         {
             this.carService = carService;
         }
+
         // GET: ReviewController
         public ActionResult Index()
         {
@@ -53,24 +54,14 @@ namespace YipRestaurantApp.Controllers
             string lName = HttpContext.Session.GetString("personLast");
             UserModel aPerson = new UserModel();
             aPerson.FirstName = fName;
-            aPerson.LastName = lName;
+            aPerson.Password = lName;
             car.Person = aPerson;
             if (ModelState.IsValid)
             {
-
-
                 carService.Create(car);
                 return RedirectToAction(nameof(Index));
             }
             return View(car);
-            //try
-            //{
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //catch
-            //{
-            //    return View();
-            //}
         }
 
         // GET: ReviewController/Edit/ connects to the edit view
@@ -124,7 +115,7 @@ namespace YipRestaurantApp.Controllers
             return View(car);
         }
 
-        
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
