@@ -24,7 +24,7 @@ namespace YipRestaurantApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddScoped<CarService>();
+            services.AddScoped<ReviewService>();
             services.AddSession();
         }
 

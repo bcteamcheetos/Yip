@@ -10,8 +10,8 @@
 <div>
     <form id="LogIn" asp-action="LogIn" method="post">
         <div class="form-group col-sm-3">
-            <label>Name</label>
-            <input asp-for="FirstName" class="form-control" required size="15" onclick="value=''" /><br />      @*Text box for username*@
+            <label for="name">Name</label>
+            <input asp-for="FirstName" name="FirstName" id="name" class="form-control" required size="15" onclick="value=''" /><br />      @*Text box for username*@
         </div>
         <div class="form-group col-sm-3">
             <label>Password</label>
