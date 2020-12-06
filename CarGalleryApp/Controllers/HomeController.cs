@@ -13,9 +13,9 @@ namespace YipRestaurantApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly CarService carService;
+        private readonly ReviewService carService;
 
-        public HomeController(CarService carService)
+        public HomeController(ReviewService carService)
         {
             this.carService = carService;
         }
@@ -25,23 +25,32 @@ namespace YipRestaurantApp.Controllers
             return View();
         }
 
-        public IActionResult LogIn(UserModel userModel) 
+        //Post Method, passing a userModel to Login
+        public IActionResult LogIn(UserModel userModel) //Requires a userModel, firstName and password
         {
             UserModel um = new UserModel();
             um.FirstName = userModel.FirstName;
             um.Password = userModel.Password;
-            bool myVar = carService.Get(um.FirstName, um.Password);
-            if (!myVar)
+
+            bool myVar = carService.Get(um.FirstName, um.Password); //Calls a Method in CarService to start connection to Mongo, returns a Bool, True if in DB
+
+            if (!myVar) //Failed Authentication, send back to Login, clear fields
             {
+                ModelState.Clear(); 
+                UserModel ObjContact = new UserModel() //Create a new userModel, set to an empty string
+                {
+                    FirstName = string.Empty,
+                    Password = string.Empty,
+                };
                 ViewBag.LoginMessage = "Not a valid email or password. Try agin please. ";
-                return View("Index");
+                return View("Index", ObjContact);
             }
-            HttpContext.Session.SetString("personFirst", um.FirstName);
+            HttpContext.Session.SetString("personFirst", um.FirstName); //Succsessfull Authentication, save to Session so we can use elsewhere in Application
             HttpContext.Session.SetString("personLast", um.Password);
 
             Console.WriteLine($"Login Successful! {um.FirstName}");
             ViewBag.firstName = um.FirstName;
-            return View("Landing");
+            return View("Landing"); //Send user to Landing Page
         }
 
         public IActionResult Landing()

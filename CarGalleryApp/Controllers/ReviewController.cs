@@ -11,16 +11,16 @@ namespace YipRestaurantApp.Controllers
 {
     public class ReviewController : Controller
     {
-        private readonly CarService carService;
-        public ReviewController(CarService carService)
+        private readonly ReviewService reviewService;
+        public ReviewController(ReviewService reviewService)
         {
-            this.carService = carService;
+            this.reviewService = reviewService;
         }
 
         // GET: ReviewController
         public ActionResult Index()
         {
-            return View(carService.Get());
+            return View(reviewService.Get());
         }
 
         // GET: ReviewController/Details/ connects to the delete view
@@ -31,12 +31,12 @@ namespace YipRestaurantApp.Controllers
             {
                 return NotFound();
             }
-            var car = carService.Get(id);
-            if (car == null)
+            var review = reviewService.Get(id);
+            if (review == null)
             {
                 return NotFound();
             }
-            return View(car);
+            return View(review);
         }
 
         // GET: ReviewController/Create
@@ -48,20 +48,20 @@ namespace YipRestaurantApp.Controllers
         // POST: ReviewController/Create connects to the create view
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Review car)
+        public ActionResult Create(Review review)
         {
             string fName = HttpContext.Session.GetString("personFirst");
             string lName = HttpContext.Session.GetString("personLast");
             UserModel aPerson = new UserModel();
             aPerson.FirstName = fName;
             aPerson.Password = lName;
-            car.Person = aPerson;
+            review.Person = aPerson;
             if (ModelState.IsValid)
             {
-                carService.Create(car);
+                reviewService.Create(review);
                 return RedirectToAction(nameof(Index));
             }
-            return View(car);
+            return View(review);
         }
 
         // GET: ReviewController/Edit/ connects to the edit view
@@ -71,31 +71,31 @@ namespace YipRestaurantApp.Controllers
             {
                 return NotFound();
             }
-            var car = carService.Get(id);
-            if (car == null)
+            var review = reviewService.Get(id);
+            if (review == null)
             {
                 return NotFound();
             }
-            return View(car);
+            return View(review);
         }
 
         // POST: ReviewController/Edit/ connects to the edit view
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(string id, Review car)
+        public ActionResult Edit(string id, Review review)
         {
-            if (id != car.Id)
+            if (id != review.Id)
             {
                 return NotFound();
             }
             if (ModelState.IsValid)
             {
-                carService.Update(id, car);
+                reviewService.Update(id, review);
                 return RedirectToAction(nameof(Index));
             }
             else
             {
-                return View(car);
+                return View(review);
             }
         }
 
@@ -107,12 +107,12 @@ namespace YipRestaurantApp.Controllers
                 return NotFound();
             }
 
-            var car = carService.Get(id);
-            if (car == null)
+            var review = reviewService.Get(id);
+            if (review == null)
             {
                 return NotFound();
             }
-            return View(car);
+            return View(review);
         }
 
 
@@ -122,14 +122,14 @@ namespace YipRestaurantApp.Controllers
         {
             try
             {
-                var car = carService.Get(id);
+                var review = reviewService.Get(id);
 
-                if (car == null)
+                if (review == null)
                 {
                     return NotFound();
                 }
 
-                carService.Remove(car.Id);
+                reviewService.Remove(review.Id);
 
                 return RedirectToAction(nameof(Index));
             }
