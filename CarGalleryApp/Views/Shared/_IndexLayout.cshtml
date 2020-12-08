@@ -14,31 +14,32 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 grad1">
             <div class="container">
-                <a class="navbar-brand red" asp-area="" asp-controller="Home" asp-action="Index">Yip!</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand red text-lg-center" asp-area="" asp-controller="Home" asp-action="Index"> <h1><strong>Yip!</strong></h1></a>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <div class="view">
+        <div class="mask">
+            <div class="container">
+                <div class="row">
+                        @RenderBody()
+                </div>
+            </div>
+        </div>
     </div>
+    
 
     <footer class="border-top footer text-muted grad2">
         <div class="container">
-            &copy; 2020 - Yip Review App <a asp-area="" asp-controller="Home"></a>
+            &copy; 2020 - Yip! Review App
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
-
 </body>
 
 </html>

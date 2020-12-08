@@ -2,25 +2,53 @@
     Layout = "/Views/Shared/_IndexLayout.cshtml"; }
 @model YipRestaurantApp.Models.UserModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Yip</h1>
-    <p>An application for exclusive group's of people to add authentic reviews of restaurants</p>
-</div>
-@*creates a form on the login page for the user to loging to the application*@
-<div>
-    <form id="LogIn" asp-action="LogIn" method="post">
-        <div class="form-group col-sm-3">
-            <label for="name">Name</label>
-            <input asp-for="FirstName" name="FirstName" id="name" class="form-control" required size="15" onclick="value=''" /><br />      @*Text box for username*@
-        </div>
-        <div class="form-group col-sm-3">
-            <label>Password</label>
-            <input asp-for="Password" type="password" class="form-control" required size="15" onclick="value=''" /><br />    @*Text box for password*@
-        </div>
-        <div class="inputwrap">
-            <label><button type="submit">Log In</button></label>
-            <label style="color:red;">@ViewBag.LoginMessage</label>
-        </div>
 
-    </form>
+
+@*left column*@
+<div class="col-md-6 mb-4 white-text text-center text-md-left">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Yip!</h1>
+        <hr />
+        <p>An application for exclusive group's of people to add authentic reviews of restaurants</p>
+    </div>
+</div>
+
+
+@*right column*@
+@*creates a form on the login page for the user to log to the application*@
+<div class="col-md-6 col-xl-5 mb-4">
+    <div class="card">
+        <div class="card-body">
+            <form id="LogIn" asp-action="LogIn" method="post">
+
+                @*heading*@
+                <h3 class="dark-grey-text text-center">
+                    Login Here
+                </h3>
+
+                <hr>
+
+                @*Username entry*@
+                <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input asp-for="FirstName" name="FirstName" type="text" id="name" class="form-control" required size="15" onclick="value=''" />
+                    <label for="form3">User Name</label>
+                </div>
+
+                @*password entry*@
+                <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input asp-for="Password" type="password" class="form-control" required size="15" onclick="value=''" />
+                    <label for="form2">Password</label>
+                </div>
+
+                @*submit button*@
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary box-shadow">Login</button>
+                    <label style="color:red;">@ViewBag.LoginMessage</label>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>

@@ -1,9 +1,48 @@
 ﻿@{ ViewData["Title"] = "Landing Page"; }
 
-<h1>Welcome @ViewBag.firstName</h1>
 
-<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a> @*link to "list of reviews" page*@
 
-<a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Create">Create Review</a> @*link to 'create review' page*@
+@*left column*@
+<div class="col-md-6 mb-4 white-text text-center text-md-left">
+    <div class="text-center">
+        <h1 class="display-4">Welcome, <strong>@ViewBag.firstName</strong></h1>
+        <p class="font-italic">Your personalized homepage that will take you to all parts of the app.</p>
+        <hr />
+        <p>To view all of the reviews posted in your circle, click <a asp-area="" asp-controller="Review" asp-action="Index"><strong class="text-primary">"Reviews"!</strong></a></p>
+        <br />
+        <p>Have something to share? Write up your own by clicking <a asp-area="" asp-controller="Review" asp-action="Create"><strong class="text-primary">"Create Review"!</strong></a></p>
+        <br />
+        <p>Finished with the app? Click <a asp-area="" asp-controller="Home" asp-action="Index"><strong class="text-primary">"Log out"!</strong></a></p>
+    </div>
+</div>
 
-<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Log Out</a> @*link to 'login' page and will log the person out of app*@
+
+
+<div class="col-md-6 col-xl-4 mb-4">
+    <div >
+        <div class="card-body">
+
+            <br />
+
+            <div class="text-center">
+                <a class="btn btn-primary box-shadow btn-lg" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="text-center">
+                <a class="btn btn-primary box-shadow btn-lg" asp-area="" asp-controller="Review" asp-action="Create">Create Review</a>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="text-center">
+                <a class="btn btn-primary box-shadow btn-lg" asp-area="" asp-controller="Home" asp-action="Index">Log Out</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+

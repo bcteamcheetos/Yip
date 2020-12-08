@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 grad1">
             <div class="container">
-                <a class="navbar-brand red" asp-area="" asp-controller="Home" asp-action="Index">Yip!</a>
+                <a class="navbar-brand red text-lg-center" asp-area="" asp-controller="Home" asp-action="Index"> <h1><strong>Yip!</strong></h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,13 +22,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Landing">Home</a>
+                            <a class="nav-link text-dark text-lg-left" asp-area="" asp-controller="Home" asp-action="Landing">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
+                            <a class="nav-link text-dark text-lg-left" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Create">Create Review</a>
+                            <a class="nav-link text-dark text-lg-left" asp-area="" asp-controller="Review" asp-action="Create">Create Review</a>
                         </li>
                     </ul>
                 </div>
@@ -36,15 +36,21 @@
         </nav>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <div class="view">
+        <div class="mask">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <footer class="border-top footer text-muted grad2">
         <div class="container">
-            &copy; 2020 - Yip Review App <a asp-area="" asp-controller="Home"></a>
+            &copy; 2020 - Yip! Review App
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

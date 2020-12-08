@@ -4,61 +4,64 @@
     ViewData["Title"] = "Car Gallery";
 }
 
-<h1>List of Reviews</h1>
+@*table heading/title*@
 
-<p>
-    <a asp-action="Create">Add a New Review </a>
-</p>
+    <div class="col-md-12 my-4 text-left">
+        <h1 class="text-md-left">List of Reviews</h1>
+        <a asp-action="Create" class="btn btn-outline-dark align-self-center text-md-left">Add a New Review </a>
+    </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            @*<th>*@
-            @*@Html.DisplayNameFor(model => model.ImageUrl)*@ @*img*@
-            @*</th>*@
-
-            <th>
-                @Html.DisplayNameFor(model => model.Brand) @*restaurant name*@
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Model) @*date*@
-            </th>
-            <th style="width:200px">
-                @Html.DisplayNameFor(model => model.Year) @*rating*@
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price) @*comments*@
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Person) @*comments*@
-            </th>
-
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Brand)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Model)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Year)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Person.FirstName) @*Update this to include last Name*@
-                </td>
-                <td style="width:200px">
-                    @Html.ActionLink("Details", "Details", new { id = item.Id })
-                </td>
+                @*<th>*@
+                @*@Html.DisplayNameFor(model => model.ImageUrl)*@ @*img*@
+                @*</th>*@
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Brand) @*restaurant name*@
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Model) @*date*@
+                </th>
+                <th style="width:200px">
+                    @Html.DisplayNameFor(model => model.Year) @*rating*@
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price) @*comments*@
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Person) @*comments*@
+                </th>
+
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            @*autopopulates table with reviews from database*@
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Person.FirstName) @*Update this to include last Name*@
+                    </td>
+                    <td style="width:200px">
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "text-light btn btn-info" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

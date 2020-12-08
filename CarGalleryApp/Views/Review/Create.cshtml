@@ -4,50 +4,75 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create a New Review</h1>
 
-<h4>Review</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-controller="Review" asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="col-md-6 mb-4 white-text text-center text-md-left">
+    <h1 class="font-italic">Create a New Review</h1>
 
-            <div class="form-group">
-                <label asp-for="Brand" class="control-label">Restaurant</label>
-                <input asp-for="Brand" class="form-control" />
-                <span asp-validation-for="Brand" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Model" class="control-label">Date</label>
-                <input asp-for="Model" class="form-control" />
-                <span asp-validation-for="Model" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Year" class="control-label">Rating(1-5)</label>
-                <input type="number" min="1" max="5" asp-for="Year" class="form-control" />
-                <span asp-validation-for="Year" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label">Comments</label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            @*<div class="form-group">
-                <label asp-for="Person" class="control-label">Reviewer</label>
-                <input asp-for="Person" class="form-control" />
-                <span asp-validation-for="Person" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <hr />
+
+
+    <h5 class="font-italic">Write a review about a recent experience you had!</h5>
+    <strong>Please include:</strong>
+    <br />
+    Restaurant name
+    <br />
+    The date and time you went there
+    <br />
+    The rating out of 5, 5 being the best
+    <br />
+    And anything else you have to say!
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    Click "Back to List" to return without submitting
+    <br />
+    <br />
+    <div>
+        <a asp-action="Index" class="btn btn-primary btn-sm">Back to List</a>
     </div>
+
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="col-md-6 col-xl-5 mb-4">
+    <br />
+    <br />
+    <br />
+
+    <form asp-controller="Review" asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Brand" class="control-label">Restaurant</label>
+            <input asp-for="Brand" class="form-control" />
+            <span asp-validation-for="Brand" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Model" class="control-label">Date</label>
+            <input asp-for="Model" class="form-control" />
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Year" class="control-label">Rating(1-5)</label>
+            <input type="number" min="1" max="5" asp-for="Year" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label">Comments</label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-success btn-lg" />
+        </div>
+    </form>
+
+    
+
 </div>
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

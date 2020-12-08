@@ -4,47 +4,75 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
 
-<div>
+
+<div class="col-md-6 text-center">
+    
+    <h1>Details</h1>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Brand)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Brand)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Model)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Model)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Year)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Year)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Person)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Person.FirstName)
-        </dd>
+
+    <div class="container-fluid">
+
+        <div class="row my-3" style="width:auto">
+            <div class="col-md-4 font-weight-bold text-md-right">
+                @Html.DisplayNameFor(model => model.Brand)
+            </div>
+            <div class="col-md-8 text-md-center">
+                @Html.DisplayFor(model => model.Brand)
+            </div>
+        </div>
+        <div class="row my-3" style="width:auto">
+            <div class="col-md-4 font-weight-bold text-md-right">
+                @Html.DisplayNameFor(model => model.Model)
+            </div>
+            <div class="col-md-8 text-md-center">
+                @Html.DisplayFor(model => model.Model)
+            </div>
+        </div>
+        <div class="row my-3" style="width:auto">
+            <div class="col-md-4 font-weight-bold text-md-right">
+                @Html.DisplayNameFor(model => model.Year)
+            </div>
+            <div class="col-md-8 text-md-center">
+                @Html.DisplayFor(model => model.Year)
+            </div>
+        </div>
+        <div class="row my-3" style="width:auto">
+            <div class="col-md-4 font-weight-bold text-md-right">
+                @Html.DisplayNameFor(model => model.Price)
+            </div>
+            <div class="col-md-8 text-md-center">
+                @Html.DisplayFor(model => model.Price)
+            </div>
+        </div>
+        <div class="row my-3" style="width:auto">
+            <div class="col-md-4 font-weight-bold text-md-right">
+                @Html.DisplayNameFor(model => model.Person)
+            </div>
+            <div class="col-md-8 text-md-center">
+                @Html.DisplayFor(model => model.Person.FirstName)
+            </div>
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+    <div>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "text-dark btn btn-warning", @alt = "edit this review button" }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "text-light btn btn-danger" }) |
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+    <br />
+    <br />
+</div>
 
 
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
+
+
+
+
+
+
