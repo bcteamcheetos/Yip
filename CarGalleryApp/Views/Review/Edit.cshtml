@@ -39,6 +39,7 @@
                 <label asp-for="Person.FirstName" class="control-label">Reviewer</label>
                 <input asp-for="Person.FirstName" class="form-control" readonly/>
                 <span asp-validation-for="Person.FirstName" class="text-danger"></span>
+                @Html.HiddenFor(m=>m.Person.Password)  @*Had to use Html Hidden to attach Password to Model, it was not being passed to Controller and dropping out of the DB in Atlas*@
             </div>
             <br />
             <br />
