@@ -50,12 +50,9 @@ namespace YipRestaurantApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Review review)
         {
-            string fName = HttpContext.Session.GetString("personFirst");
-            string lName = HttpContext.Session.GetString("personLast");
-            UserModel aPerson = new UserModel();
-            aPerson.FirstName = fName;
-            aPerson.Password = lName;
+            UserModel aPerson = GetUserFromSession();
             review.Person = aPerson;
+
             if (ModelState.IsValid)
             {
                 reviewService.Create(review);
@@ -67,6 +64,8 @@ namespace YipRestaurantApp.Controllers
         // GET: ReviewController/Edit/ connects to the edit view
         public ActionResult Edit(string id)
         {
+            UserModel aPerson = GetUserFromSession();
+
             if (id == null)
             {
                 return NotFound();
@@ -76,6 +75,12 @@ namespace YipRestaurantApp.Controllers
             {
                 return NotFound();
             }
+            if (aPerson.FirstName != review.Person.FirstName
+            || aPerson.Password != review.Person.Password)
+            {
+                ViewBag.LoginMessage = $"Sorry {aPerson.FirstName}, you cannot edit other Yip User Reviews!";
+                return View("Details", review);
+            }
             return View(review);
         }
 
@@ -84,6 +89,8 @@ namespace YipRestaurantApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(string id, Review review)
         {
+            
+
             if (id != review.Id)
             {
                 return NotFound();
@@ -102,6 +109,7 @@ namespace YipRestaurantApp.Controllers
         // GET: ReviewController/Delete/  Connects to Delete view
         public ActionResult Delete(string id)
         {
+            UserModel aPerson = GetUserFromSession();
             if (id == null)
             {
                 return NotFound();
@@ -111,6 +119,12 @@ namespace YipRestaurantApp.Controllers
             if (review == null)
             {
                 return NotFound();
+            }
+            if (aPerson.FirstName != review.Person.FirstName //Checks if current user is the person who submitted review, if not send back to Detail with message
+            || aPerson.Password != review.Person.Password)
+            {
+                ViewBag.LoginMessage = $"Sorry {aPerson.FirstName}, you cannot delete other Yip User Reviews!";
+                return View("Details", review);
             }
             return View(review);
         }
@@ -137,6 +151,14 @@ namespace YipRestaurantApp.Controllers
             {
                 return View();
             }
+        }
+        public UserModel GetUserFromSession() //Helper Method to read a user from Session and return a userModel
+        {
+            string name = HttpContext.Session.GetString("personFirst");
+            string password = HttpContext.Session.GetString("personLast");
+
+            UserModel aPerson = new UserModel(name, password);
+            return aPerson;
         }
     }
 }

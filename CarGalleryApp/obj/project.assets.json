@@ -6225,23 +6225,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dicks\\.nuget\\packages\\": {},
+    "C:\\Users\\Neil\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\!OneDrive\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\yip3\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "projectUniqueName": "C:\\Users\\Neil\\Desktop\\TestFolder\\jamesUpdate\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
       "projectName": "YipRestaurantApp",
-      "projectPath": "S:\\!OneDrive\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\yip3\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
-      "packagesPath": "C:\\Users\\dicks\\.nuget\\packages\\",
-      "outputPath": "S:\\!OneDrive\\OneDrive\\!!School\\Bellevue College\\2020 Fall\\ISIT 320\\!Group project\\!Yip\\yip3\\Yip\\CarGalleryApp\\obj\\",
+      "projectPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\jamesUpdate\\Yip\\CarGalleryApp\\YipRestaurantApp.csproj",
+      "packagesPath": "C:\\Users\\Neil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Neil\\Desktop\\TestFolder\\jamesUpdate\\Yip\\CarGalleryApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dicks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Neil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6253,7 +6253,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6265,7 +6264,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -6294,7 +6292,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
